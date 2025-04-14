@@ -9,6 +9,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@300;400;600&display=swap"
         rel="stylesheet">
     <style>
@@ -17,7 +20,7 @@
         }
 
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .navbar {
@@ -41,9 +44,18 @@
                 margin-right: auto;
             }
         }
-    </style>
+
+        .dancing-script-<uniquifier> {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+    </style>  
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="bg-white">
@@ -79,19 +91,33 @@
     </nav>
 
     <section class="relative w-full h-screen flex items-center justify-center bg-cover bg-center text-white"
-    style="background-image: url('header.jpg');">
-    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
-    <div class="relative text-center">
-        <h1 class="text-5xl font-bold" data-translate="title-main">Madrid by Petra</h1>
-        <p class="mt-2 text-xl" data-translate="discover">Descubre Madrid con una guía experta</p>
-        <a href="#services"
-            class="mt-6 inline-block bg-teal-500 text-white py-3 px-6 rounded-none text-lg transition duration-300 ease-in-out hover:bg-teal-400"
-            data-translate="explore">EXPLORA</a>
-    </div>
-</section>
+        style="background-image: url('header.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+        <div class="relative text-center">
+            <h1 data-aos="fade-up" data-aos-duration="1000"
+    class="text-5xl md:text-6xl font-bold font-serif text-white">
+    Madrid by Petra
+</h1>
+
+            <p class="mt-4 text-xl md:text-2xl italic text-white animate-fade-in delay-300"
+               data-translate="discover">
+               Descubre Madrid con una guía experta
+            </p>
+            
+
+            <a href="#services"
+                class="mt-6 inline-flex items-center gap-2 cursor-pointer
+                 bg-gradient-to-r from-teal-500 to-emerald-500 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                data-translate="explore">
+                <i class="fas fa-map-marked-alt"></i>
+                EXPLORA
+            </a>
+
+        </div>
+    </section>
 
 
-    <section id="services" class="py-20 px-6 text-center bg-white Container_containerlg__tE5_m">
+    <section id="services" data-aos="fade-up" class="py-20 px-6 text-center bg-white Container_containerlg__tE5_m">
         <h2 class="text-4xl font-semibold text-teal-700" data-translate="our-services">Nuestros Servicios</h2>
         <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white shadow-lg rounded-none p-8 transition transform hover:-translate-y-2 hover:shadow-xl">
@@ -116,7 +142,7 @@
         </div>
     </section>
 
-    <section id="testimonials" class="py-20 px-6 bg-teal-100">
+    <section id="testimonials" data-aos="fade-up" class="py-20 px-6 bg-teal-100">
         <h2 class="text-4xl font-semibold text-teal-700 text-center" data-translate="testimonials-title">Lo que dicen
             nuestros clientes</h2>
         <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -150,7 +176,7 @@
         </div>
     </section>
 
-    <section class="py-16 px-6 bg-white">
+    <section class="py-16 px-6 bg-white" data-aos="fade-up">
         <h2 class="text-3xl font-semibold text-teal-700 text-center mb-12" data-translate="carousel-title">Descubre
             Madrid</h2>
 
@@ -203,36 +229,39 @@
     </section>
     -->
 
-    <section id="contact" class="py-20 px-6 bg-black text-white">
+    <section id="contact" data-aos="" class="py-20 px-6 bg-black text-white">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-          <!-- Title -->
-          <div class="md:col-span-1">
-            <h2 class="text-4xl font-semibold text-teal-500 text-left" data-translate="contact-title">Contacto</h2>
-          </div>
-      
-          <!-- Contact Info + Social -->
-          <div class="md:col-span-2 space-y-4">
-            <p class="text-white" data-translate="address">Manuela Malasaña, Madrid, España</p>
-            <p class="text-white" data-translate="phone-label">Teléfono:</p>
-            <a href="tel:+34617909280" class="text-teal-400 hover:underline">+34 617 90 92 80</a>
-            <p class="text-white mt-2">Email:</p>
-            <a href="mailto:petrapim@gmail.com" class="text-teal-400 hover:underline">petrapim@gmail.com</a>
-      
-            <!-- Social Media -->
-            <div class="flex gap-6 pt-4 text-2xl">
-              <a href="https://www.facebook.com/madridbypetra" target="_blank" rel="noopener noreferrer"
-                class="text-white hover:text-teal-400 transition">
-                <i class="fab fa-facebook-square"></i>
-              </a>
-              <a href="https://www.instagram.com/madridbypetra/" target="_blank" rel="noopener noreferrer"
-                class="text-white hover:text-teal-400 transition">
-                <i class="fab fa-instagram"></i>
-              </a>
+            <!-- Title -->
+            <div class="md:col-span-1">
+                <h2 class="text-4xl font-semibold text-teal-500 text-left" data-translate="contact-title">Contacto</h2>
             </div>
-          </div>
+
+            <!-- Contact Info + Social -->
+            <div class="md:col-span-2 space-y-4">
+                <p class="text-white" data-translate="address">Manuela Malasaña, Madrid, España</p>
+                <p class="text-white" data-translate="phone-label">Teléfono:</p>
+                <a href="tel:+34617909280" class="text-teal-400 hover:underline">+34 617 90 92 80</a>
+                <p class="text-white mt-2">Email:</p>
+                <a href="mailto:petrapim@gmail.com" class="text-teal-400 hover:underline">petrapim@gmail.com</a>
+
+                <!-- Social Media -->
+                <div class="flex gap-6 pt-4 text-2xl">
+                    <a href="https://www.facebook.com/madridbypetra" target="_blank" rel="noopener noreferrer"
+                        class="text-white hover:text-teal-400 transition">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="https://www.instagram.com/madridbypetra/" target="_blank" rel="noopener noreferrer"
+                        class="text-white hover:text-teal-400 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </section>
-      
+    </section>
+    <footer class="bg-teal-700 text-white py-6 text-center text-sm">
+        <p>&copy; 2025 Madrid by Petra. Diseñado por <a href="http://selekode.github.io/SeanLeitch"><span>Sean
+                    Leitch</span></a></p>
+    </footer>
 
 
     <!-- WhatsApp Floating Button -->
@@ -461,6 +490,8 @@
     </script>
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>
