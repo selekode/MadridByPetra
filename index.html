@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <style>
         html {
             scroll-behavior: smooth;
@@ -51,7 +52,17 @@
             font-weight: <weight>;
             font-style: normal;
         }
-    </style>  
+
+        .swiper-pagination-bullet {
+            background-color: #0F766E;
+            opacity: 0.4;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #0F766E;
+            opacity: 1;
+        }
+    </style>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -95,15 +106,14 @@
         <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
         <div class="relative text-center">
             <h1 data-aos="fade-up" data-aos-duration="1000"
-    class="text-5xl md:text-6xl font-bold font-serif text-white">
-    Madrid by Petra
-</h1>
+                class="text-5xl md:text-6xl font-bold font-serif text-white">
+                Madrid by Petra
+            </h1>
 
-            <p class="mt-4 text-xl md:text-2xl italic text-white animate-fade-in delay-300"
-               data-translate="discover">
-               Descubre Madrid con una guía experta
+            <p class="mt-4 text-xl md:text-2xl italic text-white animate-fade-in delay-300" data-translate="discover">
+                Descubre Madrid con una guía experta
             </p>
-            
+
 
             <a href="#services"
                 class="mt-6 inline-flex items-center gap-2 cursor-pointer
@@ -143,38 +153,86 @@
     </section>
 
     <section id="testimonials" data-aos="fade-up" class="py-20 px-6 bg-teal-100">
-        <h2 class="text-4xl font-semibold text-teal-700 text-center" data-translate="testimonials-title">Lo que dicen
-            nuestros clientes</h2>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white shadow-lg rounded-none p-8 text-center">
-                <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
-                <p class="text-gray-600" data-translate="testimonial-1">"My daughter and I had an amazing tour with
-                    Petra. We had a tour of the highlights of the Prado followed by a tapas experience. She is
-                    incredibly knowledgeable and gave insights into art and history. The tapas were delicious and I felt
-                    that I had an immersion into Madrid that I would never have had without her. Highly recommend! Thank
-                    you for a wonderful day, Petra!"</p>
-                <p class="mt-4 font-semibold text-teal-600" data-translate="testimonial-name-1">Allegra Schorr</p>
-                <p class="text-gray-500" data-translate="testimonial-location-1">New York, USA</p>
+        <h2 class="text-4xl font-semibold text-teal-700 text-center" data-translate="testimonials-title">
+            Lo que dicen nuestros clientes
+        </h2>
+
+        <!-- Swiper -->
+        <div class="swiper mt-10">
+            <div class="swiper-wrapper">
+
+                <!-- Testimonial Slide 1 -->
+                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-center">
+                    <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
+                    <p class="text-gray-600" data-translate="testimonial-1">"My daughter and I had an amazing tour with
+                        Petra..."</p>
+                    <p class="mt-4 font-semibold text-teal-600" data-translate="testimonial-name-1">Allegra Schorr</p>
+                    <p class="text-gray-500" data-translate="testimonial-location-1">New York, USA</p>
+                </div>
+
+                <!-- Testimonial Slide 2 -->
+                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-center">
+                    <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
+                    <p class="text-gray-600" data-translate="testimonial-2">"We had a great day with Petra..."</p>
+                    <p class="mt-4 font-semibold text-teal-600" data-translate="testimonial-name-2">Betsy Teutsch</p>
+                    <p class="text-gray-500" data-translate="testimonial-location-2">Mount Airy, Pennsylvania</p>
+                </div>
+
+                <!-- Testimonial Slide 3 -->
+                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-center">
+                    <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
+                    <p class="text-gray-600" data-translate="testimonial-3">"Our tour in Madrid far exceeded my
+                        expectations..."</p>
+                    <p class="mt-4 font-semibold text-teal-600" data-translate="testimonial-name-3">Rose Kelly</p>
+                    <p class="text-gray-500" data-translate="testimonial-location-3">Philadelphia, Pennsylvania</p>
+                </div>
+
+                <!-- Article Excerpt Slide 1 -->
+                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-left">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-newspaper text-teal-600 text-3xl"></i>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-teal-700 mb-2" data-translate="testimonial-article-title-1">
+                        "Still haven't had enough of these people"</h3>
+                    <p class="text-gray-600 mb-4" data-translate="testimonial-article-content-1">Petra Pimminger has
+                        been guiding tourists through Madrid for ten years. In an interview, she explains that it
+                        requires a lot of patience and people skills..</p>
+                    <a href="https://www.derstandard.at/story/2956446/hab-noch-immer-nicht-genug-von-den-leuten"
+                        target="_blank" class="text-sm text-teal-700 underline"
+                        data-translate="testimonial-article-readMore">Leer
+                        artículo completo</a>
+                    <p class="mt-4 font-semibold text-teal-600">Redaktion</p>
+                    <p class="text-gray-500">Der Standard</p>
+                </div>
+
+                <!-- Article Excerpt Slide 2 -->
+                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-left">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-newspaper text-teal-600 text-3xl"></i>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-teal-700 mb-2" data-translate="testimonial-article-title-2">A
+                        Culinary Journey Through Madrid</h3>
+                    <p class="text-gray-600 mb-4" data-translate="testimonial-article-content-2">Join Petra on a
+                        gastronomic adventure, exploring the flavors of
+                        Madrid's traditional and modern cuisine in this immersive tour experience.</p>
+                    <a href="https://www.derstandard.at/story/2000004635829/die-floehe-in-francos-filz-auf-den-spuren-der-movida"
+                        target="_blank" class="text-sm text-teal-700 underline"
+                        data-translate="testimonial-article-readMore">Leer
+                        artículo completo</a>
+                    <p class="mt-4 font-semibold text-teal-600">Ulf Lippitz</p>
+                    <p class="text-gray-500">Der Standard</p>
+                </div>
             </div>
-            <div class="bg-white shadow-lg rounded-none p-8 text-center">
-                <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
-                <p class="text-gray-600" data-translate="testimonial-2">"We had a great day with Petra, learning so much
-                    about the contemporary socio-economic, cultural scene in Madrid - along with the history et al.
-                    Don't miss the Mercado De San Miguel!"</p>
-                <p class="mt-4 font-semibold text-teal-600" data-translate="testimonial-name-2">Betsy Teutsch</p>
-                <p class="text-gray-500" data-translate="testimonial-location-2">Mount Airy, Pennsylvania</p>
-            </div>
-            <div class="bg-white shadow-lg rounded-none p-8 text-center">
-                <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
-                <p class="text-gray-600" data-translate="testimonial-3">"Our tour in Madrid far exceeded my
-                    expectations, largely due to Petra's extensive knowledge of history of Spain, the royals, arts. It
-                    was a great pleasure to meet her and spend 3 hours touring with her on my first visit to Madrid!"
-                </p>
-                <p class="mt-4 font-semibold text-teal-600" data-translate="testimonial-name-3">Rose Kelly</p>
-                <p class="text-gray-500" data-translate="testimonial-location-3">Philadelphia, Pennsylvania</p>
-            </div>
+
+            <!-- Swiper Navigation -->
+            <div class="swiper-button-next text-teal-700"></div>
+            <div class="swiper-button-prev text-teal-700"></div>
+            <div class="swiper-pagination mt-4"></div>
         </div>
     </section>
+
 
     <section class="py-16 px-6 bg-white" data-aos="fade-up">
         <h2 class="text-3xl font-semibold text-teal-700 text-center mb-12" data-translate="carousel-title">Descubre
@@ -408,6 +466,26 @@
                 "es": "Washington, DC",
                 "en": "Washington, DC"
             },
+            "testimonial-article-title-1": {
+                "es": "Todavía no me he cansado de la gente.",
+                "en": "I'm still not tired of the people."
+            },
+            "testimonial-article-content-1": {
+                "es": "Desde hace diez años, Petra Pimminger guía a turistas por Madrid. En la entrevista cuenta que para ello se necesita mucha paciencia y buen conocimiento de las personas.",
+                "en": "For the past ten years, Petra Pimminger has been guiding tourists through Madrid. In the interview, she says that doing so requires a lot of patience and a good understanding of people."
+            },
+            "testimonial-article-title-2": {
+                "es": "Las pulgas en el fieltro de Franco: tras los pasos de la movida madrileña",
+                "en": "The Fleas in Franco's Felt: On the Trail of the Movida madrileña"
+            },
+            "testimonial-article-content-2": {
+                "es": "Telefónica sigue ubicada en el alto edificio blanco de estilo Art Nouveau en la Gran Vía. A las 18:00 h, los empleados entran en pánico y salen de sus oficinas, se suben al metro o corren a la vuelta de la esquina hacia un bar, lo que conduce a los barrios nocturnos de Chueca y Malasaña. Allí también espera Petra Pimminger. La austríaca organiza el único recorrido por Madrid dedicado a la movida. Desde que llegó a la ciudad a finales de los años 90, esta época salvaje nunca la ha abandonado. Escribió su tesis doctoral sobre el tema y ahora lleva a viajeros locales y extranjeros a los lugares donde solían reunirse los protagonistas de la movida.",
+                "en": "Telefónica still resides in the white Art Nouveau high-rise on Gran Via. At 6:00 p.m., employees panic and leave their offices, hop on the subway, or rush around the corner to a bar, which leads to the nightlife districts of Chueca and Malasaña. Petra Pimminger is waiting there, too. The Austrian organizes the only tour of Madrid dedicated to the movida. Since coming to the city in the late 1990s, this wild era has never left her. She wrote her doctoral thesis on the subject and now takes local and foreign travelers to the places where the protagonists of the movida used to hang out."
+            },
+            "testimonial-article-readMore": {
+                "es": "Leer artículo completo",
+                "en": "Read article"
+            },
             "carousel-title": {
                 "es": "Descubre Madrid",
                 "en": "Discover Madrid"
@@ -489,6 +567,33 @@
         });
     </script>
 
+    <!-- Swiper Bundle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            grabCursor: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+
+    </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
