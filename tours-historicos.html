@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia Gastonomica | Madrid by Petra</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <nav class="navbar fixed top-0 left-0 w-full bg-teal-700 text-white py-4 px-6 shadow-lg z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="text-2xl font-bold dancing-script" data-translate="title">Madrid by Petra</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html#services" class="hover:text-teal-300 transition"
+                        data-translate="services">Servicios</a>
+                </li>
+                <li><a href="index.html#testimonials" class="hover:text-teal-300 transition"
+                        data-translate="testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact" class="hover:text-teal-300 transition"
+                        data-translate="contact">Contacto</a></li>
+            </ul>
+
+            <!-- Language dropdown -->
+            <div class="relative">
+                <button id="lang-toggle" class="text-white flex items-center space-x-1 focus:outline-none">
+                    <span id="current-lang">EN</span>
+                    <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 20 20">
+                        <path d="M5.25 7.5l4.25 4.25L13.75 7.5" />
+                    </svg>
+                </button>
+                <div id="lang-menu"
+                    class="hidden absolute right-0 mt-2 w-24 bg-white text-black rounded shadow-lg z-20">
+                    <button id="lang-es" class="block w-full text-left px-4 py-2 hover:bg-gray-100">ES</button>
+                    <button id="lang-en" class="block w-full text-left px-4 py-2 hover:bg-gray-100">EN</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-teal-700 text-white py-4">
+            <ul class="text-center">
+                <li><a href="index.html#services" class="block py-2 hover:bg-teal-800"
+                        data-translate="services">Servicios</a>
+                </li>
+                <li><a href="index.html##testimonials" class="hover:text-teal-300 transition"
+                        data-translate="testimonials">Testimonials</a></li>
+                <li><a href="index.html##contact" class="block py-2 hover:bg-teal-800"
+                        data-translate="contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="services" data-aos="fade-up" class="py-20 px-6 text-center bg-white Container_containerlg__tE5_m">
+        <h2 class="text-4xl font-semibold text-teal-700 mb-8" data-translate="tours-historicos">
+            Tours Historicos
+        </h2>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-3">
+            <img src="path/to/food1.jpg" alt="Gastronomía 1" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="path/to/food2.jpg" alt="Gastronomía 2" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="path/to/food3.jpg" alt="Gastronomía 3" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="path/to/food4.jpg" alt="Gastronomía 4" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="path/to/food5.jpg" alt="Gastronomía 5" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="path/to/food6.jpg" alt="Gastronomía 6" class="w-full h-64 object-cover rounded-lg shadow-md">
+        </div>
+    </section>
+
+
+    <section id="contact" data-aos="" class="py-20 px-6 bg-black text-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+            <!-- Title -->
+            <div class="md:col-span-1">
+                <h2 class="text-4xl font-semibold text-teal-500 text-left" data-translate="contact-title">Contacto</h2>
+            </div>
+
+            <!-- Contact Info + Social -->
+            <div class="md:col-span-2 space-y-4">
+                <p class="text-white" data-translate="address">Madrid, España</p>
+                <p class="text-white" data-translate="phone-label">Teléfono:</p>
+                <a href="tel:+34617909280" class="text-teal-400 hover:underline">+34 617 90 92 80</a>
+                <p class="text-white mt-2">Email:</p>
+                <a href="mailto:petra@madridbypetra.com"
+                    class="text-teal-400 hover:underline">petra@madridbypetra.com</a>
+
+                <!-- Social Media -->
+                <div class="flex gap-6 pt-4 text-2xl">
+                    <a href="https://www.facebook.com/madridbypetra" target="_blank" rel="noopener noreferrer"
+                        class="text-white hover:text-teal-400 transition">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="https://www.instagram.com/madridbypetra/" target="_blank" rel="noopener noreferrer"
+                        class="text-white hover:text-teal-400 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-teal-700 text-white py-6 text-center text-sm">
+        <p>&copy; 2025 Madrid by Petra. Diseñado por <a href="http://selekode.github.io/SeanLeitch"><span>Sean
+                    Leitch</span></a></p>
+    </footer>
+
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/34617909280" target="_blank"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/translateDropdown.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/navHamburger.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>

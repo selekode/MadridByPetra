@@ -8,61 +8,21 @@
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .navbar {
-            transition: all 0.3s ease-in-out;
-        }
-
-        .mobile-menu {
-            display: none;
-            transition: max-height 0.3s ease-in-out;
-        }
-
-        .dancing-script {
-            font-family: "Dancing Script", cursive;
-            font-weight: 600;
-        }
-
-        @media screen and (min-width: 600px) {
-            .Container_containerlg__tE5_m {
-                max-width: 1200px !important;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        .dancing-script-<uniquifier> {
-            font-family: "Dancing Script", cursive;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-        }
-
-        .swiper-pagination-bullet {
-            background-color: #0F766E;
-            opacity: 0.4;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #0F766E;
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -73,7 +33,7 @@
     <nav
         class="navbar fixed top-0 left-0 w-full bg-teal-700 text-white py-4 px-6 shadow-lg opacity-0 -translate-y-full z-10">
         <div class="container mx-auto flex justify-between items-center">
-                        <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
             <a href="#" class="text-2xl font-bold dancing-script" data-translate="title">Madrid by Petra</a>
@@ -85,11 +45,21 @@
                 <li><a href="#contact" class="hover:text-teal-300 transition" data-translate="contact">Contacto</a></li>
             </ul>
 
-            <!-- Language switcher -->
-            <div class="flex items-center space-x-4">
-                <button id="lang-es" class="text-white">ES</button>
-                <button id="lang-en" class="text-white">EN</button>
+            <!-- Language dropdown -->
+            <div class="relative">
+                <button id="lang-toggle" class="text-white flex items-center space-x-1 focus:outline-none">
+                    <span id="current-lang">ES</span>
+                    <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 20 20">
+                        <path d="M5.25 7.5l4.25 4.25L13.75 7.5" />
+                    </svg>
+                </button>
+                <div id="lang-menu"
+                    class="hidden absolute right-0 mt-2 w-24 bg-white text-black rounded shadow-lg z-20">
+                    <button id="lang-es" class="block w-full text-left px-4 py-2 hover:bg-gray-100">ES</button>
+                    <button id="lang-en" class="block w-full text-left px-4 py-2 hover:bg-gray-100">EN</button>
+                </div>
             </div>
+
         </div>
         <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-teal-700 text-white py-4">
             <ul class="text-center">
@@ -106,12 +76,11 @@
         style="background-image: url('header.jpg');">
         <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
         <div class="relative text-center">
-            <h1 data-aos="fade-up" data-aos-duration="1000"
-                class="text-5xl md:text-6xl font-bold font-serif text-white">
+            <h1 data-aos="fade-up" data-aos-duration="1000" class="text-5xl md:text-6xl dancing-script text-white">
                 Madrid by Petra
             </h1>
 
-            <p class="mt-4 text-xl md:text-2xl italic text-white animate-fade-in delay-300" data-aos="fade-up"
+            <p class="mt-4 text-xl md:text-2xl cinzel text-white animate-fade-in delay-300" data-aos="fade-up"
                 data-aos-duration="1000" data-translate="discover">
                 Descubre Madrid con una guía experta
             </p>
@@ -120,8 +89,7 @@
             <a href="#services"
                 class="mt-6 inline-flex items-center gap-2 cursor-pointer animate-fade-in delay-400 
                  bg-gradient-to-r from-teal-500 to-emerald-500 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-                data-translate="explore" data-aos="fade-up"
-                data-aos-duration="1000">
+                data-translate="explore" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fas fa-map-marked-alt"></i>
                 EXPLORA
             </a>
@@ -129,31 +97,51 @@
         </div>
     </section>
 
-
     <section id="services" data-aos="fade-up" class="py-20 px-6 text-center bg-white Container_containerlg__tE5_m">
         <h2 class="text-4xl font-semibold text-teal-700" data-translate="our-services">Nuestros Servicios</h2>
         <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white shadow-lg rounded-none p-8 transition transform hover:-translate-y-2 hover:shadow-xl">
+
+            <!-- Tour Histórico -->
+            <div
+                class="bg-white rounded-2xl shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
                 <i class="fas fa-history text-teal-600 text-5xl mb-4"></i>
                 <h3 class="text-2xl font-semibold text-teal-600" data-translate="historic-tours">Tours Históricos</h3>
                 <p class="text-gray-600 mt-3" data-translate="historic-desc">Explora la historia de Madrid con
                     recorridos guiados únicos.</p>
+                <a href="tours-historicos.html"
+                    class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
+                    data-translate="learn-more">Ver más</a>
             </div>
-            <div class="bg-white shadow-lg rounded-none p-8 transition transform hover:-translate-y-2 hover:shadow-xl">
+
+            <!-- Experiencia Gastronómica -->
+            <div
+                class="bg-white rounded-2xl shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
                 <i class="fas fa-utensils text-teal-600 text-5xl mb-4"></i>
                 <h3 class="text-2xl font-semibold text-teal-600" data-translate="gastronomy-experience">Experiencia
                     Gastronómica</h3>
                 <p class="text-gray-600 mt-3" data-translate="gastronomy-desc">Disfruta de la auténtica cocina madrileña
                     con expertos locales.</p>
+                <a href="experiencia-gastronomica.html"
+                    class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
+                    data-translate="learn-more">Ver más</a>
             </div>
-            <div class="bg-white shadow-lg rounded-none p-8 transition transform hover:-translate-y-2 hover:shadow-xl">
+
+            <!-- Eventos y Cultura -->
+            <div
+                class="bg-white rounded-2xl shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
                 <i class="fas fa-music text-teal-600 text-5xl mb-4"></i>
                 <h3 class="text-2xl font-semibold text-teal-600" data-translate="events-culture">Eventos y Cultura</h3>
                 <p class="text-gray-600 mt-3" data-translate="events-desc">Descubre conciertos, festivales y
                     espectáculos en Madrid.</p>
+                <a href="eventos-cultura.html"
+                    class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
+                    data-translate="learn-more">Ver más</a>
             </div>
+
         </div>
     </section>
+
+
 
     <section id="testimonials" data-aos="fade-up" class="py-20 px-6 bg-teal-100">
         <h2 class="text-4xl font-semibold text-teal-700 text-center" data-translate="testimonials-title">
@@ -165,7 +153,7 @@
             <div class="swiper-wrapper">
 
                 <!-- Testimonial Slide 1 -->
-                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-center">
+                <div class="swiper-slide bg-white shadow-lg rounded-2xl p-8 text-center">
                     <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
                     <p class="text-gray-600" data-translate="testimonial-1">"My daughter and I had an amazing tour with
                         Petra..."</p>
@@ -174,7 +162,7 @@
                 </div>
 
                 <!-- Testimonial Slide 2 -->
-                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-center">
+                <div class="swiper-slide bg-white shadow-lg rounded-2xl p-8 text-center">
                     <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
                     <p class="text-gray-600" data-translate="testimonial-2">"We had a great day with Petra..."</p>
                     <p class="mt-4 font-semibold text-teal-600" data-translate="testimonial-name-2">Betsy Teutsch</p>
@@ -182,7 +170,7 @@
                 </div>
 
                 <!-- Testimonial Slide 3 -->
-                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-center">
+                <div class="swiper-slide bg-white shadow-lg rounded-2xl p-8 text-center">
                     <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
                     <p class="text-gray-600" data-translate="testimonial-3">"Our tour in Madrid far exceeded my
                         expectations..."</p>
@@ -191,7 +179,7 @@
                 </div>
 
                 <!-- Testimonial Slide 4 -->
-                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-center">
+                <div class="swiper-slide bg-white shadow-lg rounded-2xl p-8 text-center">
                     <i class="fas fa-quote-left text-teal-600 text-3xl mb-4"></i>
                     <p class="text-gray-600" data-translate="testimonial-4">"Thanks again for a wonderful 2 days. We
                         love your knowledge and your enthusiasm for Madrid!We really enjoyed traveling with you. And
@@ -202,7 +190,7 @@
                 </div>
 
                 <!-- Article Excerpt Slide 1 -->
-                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-left">
+                <div class="swiper-slide bg-white shadow-lg rounded-2xl p-8 text-left">
                     <div class="flex justify-center mb-4">
                         <i class="fas fa-newspaper text-teal-600 text-3xl"></i>
                     </div>
@@ -221,7 +209,7 @@
                 </div>
 
                 <!-- Article Excerpt Slide 2 -->
-                <div class="swiper-slide bg-white shadow-lg rounded-none p-8 text-left">
+                <div class="swiper-slide bg-white shadow-lg rounded-2xl p-8 text-left">
                     <div class="flex justify-center mb-4">
                         <i class="fas fa-newspaper text-teal-600 text-3xl"></i>
                     </div>
@@ -268,7 +256,7 @@
 
             <!-- Carousel Column -->
             <div class="relative w-full">
-                <div class="overflow-hidden relative rounded-md shadow-md">
+                <div class="overflow-hidden relative rounded-2xl shadow-lg">
                     <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
                         <img src="images/1.png" class="w-full object-cover" alt="Madrid 1">
                         <img src="images/2.png" class="w-full object-cover" alt="Madrid 2">
@@ -337,292 +325,18 @@
                     Leitch</span></a></p>
     </footer>
 
-
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/34617909280" target="_blank"
-        class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full shadow-lg p-4 z-50 hover:bg-green-600 transition duration-300">
+        class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-green-600 transition duration-300">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
-    <!-- Carousel Script -->
-    <script>
-        const carousel = document.getElementById("carousel");
-        const images = carousel.children;
-        const totalImages = images.length;
-        let index = 0;
-
-        function updateCarousel() {
-            const offset = -index * 100; // Move by 100% per image
-            carousel.style.transform = `translateX(${offset}%)`;
-        }
-
-        document.getElementById("prev").addEventListener("click", () => {
-            index = (index > 0) ? index - 1 : totalImages - 1;
-            updateCarousel();
-        });
-
-        document.getElementById("next").addEventListener("click", () => {
-            index = (index < totalImages - 1) ? index + 1 : 0;
-            updateCarousel();
-        });
-
-        // Auto-slide every 3 seconds
-        setInterval(() => {
-            index = (index < totalImages - 1) ? index + 1 : 0;
-            updateCarousel();
-        }, 3000);
-    </script>
-
-    <!-- NAV Hamburguer Script (Display Mobile Menu)-->
-    <script>
-        window.addEventListener("scroll", function () {
-            const navbar = document.querySelector(".navbar");
-            if (window.scrollY > 100) {
-                navbar.classList.remove("opacity-0", "-translate-y-full");
-            } else {
-                navbar.classList.add("opacity-0", "-translate-y-full");
-            }
-        });
-
-        document.getElementById("menu-btn").addEventListener("click", function () {
-            const menu = document.getElementById("mobile-menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        });
-    </script>
-
-    <!-- Translation Script -->
-    <script>
-        // Define translations
-        const translations = {
-            "title": {
-                "es": "Madrid by Petra",
-                "en": "Madrid by Petra"
-            },
-            "services": {
-                "es": "Servicios",
-                "en": "Services"
-            },
-            "testimonials": {
-                "es": "Testimonios",
-                "en": "Testimonials"
-            },
-            "contact": {
-                "es": "Contacto",
-                "en": "Contact Us"
-            },
-            "explore": {
-                "es": "EXPLORA",
-                "en": "EXPLORA"
-            },
-            "our-services": {
-                "es": "Nuestros Servicios",
-                "en": "Our Services"
-            },
-            "historic-tours": {
-                "es": "Tours Históricos",
-                "en": "Historic Tours"
-            },
-            "historic-desc": {
-                "es": "Explora la historia de Madrid con recorridos guiados únicos.",
-                "en": "Explore Madrid’s history with unique guided tours."
-            },
-            "gastronomy-experience": {
-                "es": "Experiencia Gastronómica",
-                "en": "Gastronomic Experience"
-            },
-            "gastronomy-desc": {
-                "es": "Disfruta de la auténtica cocina madrileña con expertos locales.",
-                "en": "Enjoy authentic Madrid cuisine with local experts."
-            },
-            "events-culture": {
-                "es": "Eventos y Cultura",
-                "en": "Events & Culture"
-            },
-            "events-desc": {
-                "es": "Descubre conciertos, festivales y espectáculos en Madrid.",
-                "en": "Discover concerts, festivals, and shows in Madrid."
-            },
-            "testimonials-title": {
-                "es": "Lo que dicen nuestros clientes",
-                "en": "What our clients say"
-            },
-            "testimonial-1": {
-                "es": "\"Mi hija y yo tuvimos una visita increíble con Petra. Hicimos un recorrido por lo más destacado del Prado seguido de una experiencia de tapas. Ella tiene un conocimiento increíble y nos dio perspectivas únicas sobre el arte y la historia. Las tapas estaban deliciosas y sentí que viví una inmersión en Madrid que nunca habría tenido sin ella. ¡Altamente recomendable! ¡Gracias por un día maravilloso, Petra!\"",
-                "en": "\"My daughter and I had an amazing tour with Petra. We had a tour of the highlights of the Prado followed by a tapas experience. She is incredibly knowledgeable and gave insights into art and history. The tapas were delicious and I felt that I had an immersion into Madrid that I would never have had without her. Highly recommend! Thank you for a wonderful day, Petra!\""
-            },
-            "testimonial-name-1": {
-                "es": "Allegra Schorr",
-                "en": "Allegra Schorr"
-            },
-            "testimonial-location-1": {
-                "es": "Nueva York, EE.UU.",
-                "en": "New York, USA"
-            },
-            "testimonial-2": {
-                "es": "\"Pasamos un día genial con Petra, aprendiendo mucho sobre la escena socioeconómica y cultural contemporánea de Madrid, junto con su historia y mucho más. ¡No se pierdan el Mercado de San Miguel!\"",
-                "en": "\"We had a great day with Petra, learning so much about the contemporary socio-economic, cultural scene in Madrid - along with the history et al. Don't miss the Mercado De San Miguel!\""
-            },
-            "testimonial-name-2": {
-                "es": "Betsy Teutsch",
-                "en": "Betsy Teutsch"
-            },
-            "testimonial-location-2": {
-                "es": "Mount Airy, Pennsylvania",
-                "en": "Mount Airy, Pennsylvania"
-            },
-            "testimonial-3": {
-                "es": "\"Nuestro tour en Madrid superó con creces mis expectativas, en gran parte gracias al amplio conocimiento de Petra sobre la historia de España, la realeza y el arte. ¡Fue un verdadero placer conocerla y pasar tres horas recorriendo con ella en mi primera visita a Madrid!\"",
-                "en": "\"Our tour in Madrid far exceeded my expectations, largely due to Petra's extensive knowledge of history of Spain, the royals, arts.  It was a great pleasure to meet her and spend 3 hours touring with her on my first visit to Madrid!\""
-            },
-            "testimonial-name-3": {
-                "es": "Emily Lattner",
-                "en": "Emily Lattner"
-            },
-            "testimonial-location-3": {
-                "es": "Washington, DC",
-                "en": "Washington, DC"
-            },
-            "testimonial-4": {
-                "es": "\"Gracias de nuevo por dos días maravillosos. ¡Nos encanta tu conocimiento y tu entusiasmo por Madrid! Disfrutamos mucho viajando contigo. Y Segovia fue genial. Ven por el acueducto y quédate por los castillos y el hermoso paisaje. Gracias de nuevo por hacer que nuestro viaje fuera tan agradable.!\"",
-                "en": "\"Thanks again for a wonderful 2 days. We love your knowledge and your enthusiasm for Madrid!We really enjoyed traveling with you. And Segovia was great. Come for the acuaduct and stay for the castles and the beautiful scenery. Thanks again for making our trip so nice!\""
-            },
-            "testimonial-name-4": {
-                "es": "Alan & Peggy",
-                "en": "Alan & Peggy"
-            },
-            "testimonial-location-4": {
-                "es": "",
-                "en": ""
-            },
-            "testimonial-article-title-1": {
-                "es": "Todavía no me he cansado de la gente.",
-                "en": "I'm still not tired of the people."
-            },
-            "testimonial-article-content-1": {
-                "es": "Desde hace diez años, Petra Pimminger guía a turistas por Madrid. En la entrevista cuenta que para ello se necesita mucha paciencia y buen conocimiento de las personas.",
-                "en": "For the past ten years, Petra Pimminger has been guiding tourists through Madrid. In the interview, she says that doing so requires a lot of patience and a good understanding of people."
-            },
-            "testimonial-article-title-2": {
-                "es": "Las pulgas en el fieltro de Franco: tras los pasos de la movida madrileña",
-                "en": "The Fleas in Franco's Felt: On the Trail of the Movida madrileña"
-            },
-            "testimonial-article-content-2": {
-                "es": "Telefónica sigue ubicada en el alto edificio blanco de estilo Art Nouveau en la Gran Vía. A las 18:00 h, los empleados entran en pánico y salen de sus oficinas, se suben al metro o corren a la vuelta de la esquina hacia un bar, lo que conduce a los barrios nocturnos de Chueca y Malasaña. Allí también espera Petra Pimminger. La austríaca organiza el único recorrido por Madrid dedicado a la movida. Desde que llegó a la ciudad a finales de los años 90, esta época salvaje nunca la ha abandonado. Escribió su tesis doctoral sobre el tema y ahora lleva a viajeros locales y extranjeros a los lugares donde solían reunirse los protagonistas de la movida.",
-                "en": "Telefónica still resides in the white Art Nouveau high-rise on Gran Via. At 6:00 p.m., employees panic and leave their offices, hop on the subway, or rush around the corner to a bar, which leads to the nightlife districts of Chueca and Malasaña. Petra Pimminger is waiting there, too. The Austrian organizes the only tour of Madrid dedicated to the movida. Since coming to the city in the late 1990s, this wild era has never left her. She wrote her doctoral thesis on the subject and now takes local and foreign travelers to the places where the protagonists of the movida used to hang out."
-            },
-            "testimonial-article-readMore": {
-                "es": "Leer artículo completo",
-                "en": "Read article"
-            },
-            "carousel-title": {
-                "es": "Descubre Madrid",
-                "en": "Discover Madrid"
-            },
-            "descubre-madrid-paragraph1": {
-                "es": "Madrid te espera con su mezcla vibrante de historia, cultura y vida moderna. Desde sus palacios hasta sus mercados, cada rincón cuenta una historia única.",
-                "en": "Madrid awaits you with its vibrant blend of history, culture, and modern life. From its grand palaces to bustling markets, every corner tells a unique story."
-            }
-            ,
-            "descubre-madrid-paragraph2": {
-                "es": "Descubre sus barrios con encanto, sus atardeceres dorados y la calidez de su gente en un recorrido que no olvidarás.",
-                "en": "Discover charming neighborhoods, golden sunsets, and the warmth of its people on a journey you won't forget."
-            }
-            ,
-            "contact-title": {
-                "es": "Contácto",
-                "en": "Contact Us"
-            },
-            "name-label": {
-                "es": "Nombre",
-                "en": "Name"
-            },
-            "phone-label": {
-                "es": "Teléfono",
-                "en": "Phone"
-            },
-            "message-label": {
-                "es": "Mensaje",
-                "en": "Message"
-            },
-            "send-message": {
-                "es": "Enviar mensaje",
-                "en": "Send message"
-            },
-            "title-main": {
-                "es": "Madrid by Petra",
-                "en": "Madrid by Petra"
-            },
-            "discover": {
-                "es": "Descubre Madrid con una guía experta",
-                "en": "Discover Madrid with an expert guide"
-            }
-        };
-
-        function translatePage(language) {
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[key] && translations[key][language]) {
-                    element.textContent = translations[key][language];
-                }
-            });
-        }
-
-        // Set default language to Spanish
-        translatePage('es');
-
-        document.getElementById("lang-es").addEventListener("click", function () {
-            translatePage('es');
-        });
-
-        document.getElementById("lang-en").addEventListener("click", function () {
-            translatePage('en');
-        });
-
-        // Navbar sticky on scroll
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 0) {
-                navbar.classList.add('opacity-100', 'translate-y-0');
-            } else {
-                navbar.classList.remove('opacity-100', 'translate-y-0');
-            }
-        });
-
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function () {
-            document.getElementById('mobile-menu').classList.toggle('max-h-96');
-            document.getElementById('mobile-menu').classList.toggle('max-h-0');
-        });
-    </script>
-
-    <!-- Swiper Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <script>
-        const swiper = new Swiper('.swiper', {
-            grabCursor: true,
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                }
-            }
-        });
-
-    </script>
-
+    <script src="js/translate.js"></script>
+    <script src="js/translateDropdown.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/navHamburger.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
 </body>
