@@ -24,6 +24,14 @@ const translations = {
         "es": "Nuestros Servicios",
         "en": "Our Services"
     },
+    "pinta-cata": {
+        "es": "Pinta y Cata",
+        "en": "Paint and Drink"
+    },
+    "pinta-cata-desc": {
+        "es": "Lorem ipsum",
+        "en": "Lorem ipsum"
+    },
     "historic-tours": {
         "es": "Tours Históricos",
         "en": "Historic Tours"

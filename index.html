@@ -6,44 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madrid by Petra</title>
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-white">
     <nav
         class="navbar fixed top-0 left-0 w-full bg-teal-700 text-white py-4 px-6 shadow-lg opacity-0 -translate-y-full z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+            <!-- Menu toggle button (now visible on all screen sizes) -->
+            <button id="menu-btn" class="text-white text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
+
             <a href="#" class="text-2xl font-bold dancing-script" data-translate="title">Madrid by Petra</a>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#services" class="hover:text-teal-300 transition" data-translate="services">Servicios</a>
-                </li>
-                <li><a href="#testimonials" class="hover:text-teal-300 transition"
-                        data-translate="testimonials">Testimonials</a></li>
-                <li><a href="#contact" class="hover:text-teal-300 transition" data-translate="contact">Contacto</a></li>
-            </ul>
 
             <!-- Language dropdown -->
             <div class="relative">
@@ -59,21 +43,27 @@
                     <button id="lang-en" class="block w-full text-left px-4 py-2 hover:bg-gray-100">EN</button>
                 </div>
             </div>
-
         </div>
-        <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-teal-700 text-white py-4">
+
+        <!-- Mobile menu (now hidden initially and toggled by JS) -->
+        <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-teal-700 text-white py-4"
+            style="display: none;">
             <ul class="text-center">
-                <li><a href="#services" class="block py-2 hover:bg-teal-800" data-translate="services">Servicios</a>
-                </li>
-                <li><a href="#testimonials" class="hover:text-teal-300 transition"
-                        data-translate="testimonials">Testimonials</a></li>
-                <li><a href="#contact" class="block py-2 hover:bg-teal-800" data-translate="contact">Contacto</a></li>
+                <li><a href="tours-historicos.html" class="hover:text-teal-300 transition"
+                        data-translate="historic-tours">Tours Históricos</a></li>
+                <li><a href="experiencia-gastronomica.html" class="hover:text-teal-300 transition"
+                        data-translate="gastronomy-experience">Experiencia Gastronómica</a></li>
+                <li><a href="eventos-cultura.html" class="hover:text-teal-300 transition"
+                        data-translate="events-culture">Eventos y Cultura</a></li>
+                <li><a href="pinta-cata.html" class="hover:text-teal-300 transition" data-translate="pinta-cata">Pinta y
+                        Cata</a></li>
+                <li><a href="#contact" class="hover:text-teal-300 transition" data-translate="contact">Contacto</a></li>
             </ul>
         </div>
     </nav>
-
+    
     <section class="relative w-full h-screen flex items-center justify-center bg-cover bg-center text-white"
-        style="background-image: url('header.jpg');">
+        style="background-image: url('images/header.jpg');">
         <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
         <div class="relative text-center">
             <h1 data-aos="fade-up" data-aos-duration="1000" class="text-5xl md:text-6xl dancing-script text-white">
@@ -137,11 +127,23 @@
                     class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
                     data-translate="learn-more">Ver más</a>
             </div>
+        </div>
 
+        <div class="mt-10">
+            <!-- Card -->
+            <div class="flex justify-center">
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)] w-full max-w-md">
+                    <i class="fas fa-music text-teal-600 text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-teal-600" data-translate="pinta-cata">Pinta y Cata</h3>
+                    <p class="text-gray-600 mt-3" data-translate="pinta-cata-desc"></p>
+                    <a href="pinta-cata.html"
+                        class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
+                        data-translate="learn-more">Ver más</a>
+                </div>
+            </div>
         </div>
     </section>
-
-
 
     <section id="testimonials" data-aos="fade-up" class="py-20 px-6 bg-teal-100">
         <h2 class="text-4xl font-semibold text-teal-700 text-center" data-translate="testimonials-title">
@@ -150,7 +152,7 @@
 
         <!-- Swiper -->
         <div class="swiper mt-10">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper py-6">
 
                 <!-- Testimonial Slide 1 -->
                 <div class="swiper-slide bg-white shadow-lg rounded-2xl p-8 text-center">
@@ -337,6 +339,7 @@
     <script src="js/swiper.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/navHamburger.js"></script>
+    <script src="js/hideNav.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
 </body>

@@ -4,46 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia Gastonomica | Madrid by Petra</title>
+    <title>Madrid by Petra</title>
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-white">
     <nav class="navbar fixed top-0 left-0 w-full bg-teal-700 text-white py-4 px-6 shadow-lg z-10">
+
         <div class="container mx-auto flex justify-between items-center">
-            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+            <!-- Menu toggle button (now visible on all screen sizes) -->
+            <button id="menu-btn" class="text-white text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
+
             <a href="#" class="text-2xl font-bold dancing-script" data-translate="title">Madrid by Petra</a>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="index.html#services" class="hover:text-teal-300 transition"
-                        data-translate="services">Servicios</a>
-                </li>
-                <li><a href="index.html#testimonials" class="hover:text-teal-300 transition"
-                        data-translate="testimonials">Testimonials</a></li>
-                <li><a href="index.html#contact" class="hover:text-teal-300 transition"
-                        data-translate="contact">Contacto</a></li>
-            </ul>
 
             <!-- Language dropdown -->
             <div class="relative">
                 <button id="lang-toggle" class="text-white flex items-center space-x-1 focus:outline-none">
-                    <span id="current-lang">EN</span>
+                    <span id="current-lang">ES</span>
                     <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 20 20">
                         <path d="M5.25 7.5l4.25 4.25L13.75 7.5" />
                     </svg>
@@ -54,17 +43,21 @@
                     <button id="lang-en" class="block w-full text-left px-4 py-2 hover:bg-gray-100">EN</button>
                 </div>
             </div>
-
         </div>
-        <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-teal-700 text-white py-4">
+
+        <!-- Mobile menu (now hidden initially and toggled by JS) -->
+        <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-teal-700 text-white py-4"
+            style="display: none;">
             <ul class="text-center">
-                <li><a href="index.html#services" class="block py-2 hover:bg-teal-800"
-                        data-translate="services">Servicios</a>
-                </li>
-                <li><a href="index.html##testimonials" class="hover:text-teal-300 transition"
-                        data-translate="testimonials">Testimonials</a></li>
-                <li><a href="index.html##contact" class="block py-2 hover:bg-teal-800"
-                        data-translate="contact">Contacto</a></li>
+                <li><a href="tours-historicos.html" class="hover:text-teal-300 transition"
+                        data-translate="historic-tours">Tours Históricos</a></li>
+                <li><a href="experiencia-gastronomica.html" class="hover:text-teal-300 transition"
+                        data-translate="gastronomy-experience">Experiencia Gastronómica</a></li>
+                <li><a href="eventos-cultura.html" class="hover:text-teal-300 transition"
+                        data-translate="events-culture">Eventos y Cultura</a></li>
+                <li><a href="pinta-cata.html" class="hover:text-teal-300 transition" data-translate="pinta-cata">Pinta y
+                        Cata</a></li>
+                <li><a href="#contact" class="hover:text-teal-300 transition" data-translate="contact">Contacto</a></li>
             </ul>
         </div>
     </nav>
