@@ -4,6 +4,10 @@ const translations = {
         "es": "Madrid by Petra",
         "en": "Madrid by Petra"
     },
+    "inicio": {
+        "es": "Inicio",
+        "en": "Home"
+    },
     "services": {
         "es": "Servicios",
         "en": "Services"
