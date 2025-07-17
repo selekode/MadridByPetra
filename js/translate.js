@@ -30,7 +30,7 @@ const translations = {
     },
     "pinta-cata": {
         "es": "Pinta y Cata",
-        "en": "Paint and Drink"
+        "en": "Paint and Taste"
     },
     "pinta-cata-desc": {
         "es": "Lorem ipsum",
