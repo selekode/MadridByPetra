@@ -1,16 +1,48 @@
 // Define translations
 const translations = {
+    "introduction-title": {
+        "es": "Introducción",
+        "en": "Introduction"
+    },
     "introduction-desc": {
-        "es": "zz",
+        "es": "",
         "en": "I want to introduce you to a few of the most traditional culinary institutions in Madrid to tell you all about the legendary aperitives called tapas and favourite local drinks."
+    },
+    "centenary-tabernas-title": {
+        "es": "Centenary Tabernas de Madrid",
+        "en": "Centenary Tabernas of Madrid"
     },
     "centenary-tabernas-desc": {
         "es": "",
         "en": "Centenary Tabernas and shops are a true treasure in modern times and certified by the local authorities with a bronce plaque on the floor"
     },
+    "terraceHopping-gastronomica-title": {
+        "es": "Terrace Hopping - Gastronómica",
+        "en": "Terrace Hopping - Gastronomy"
+    },
+    "terraceHopping-gastronomica-desc": {
+        "es": "",
+        "en": ""
+    },
+    "terraceHopping-historica-title": {
+        "es": "Terrace Hopping - Histórica",
+        "en": "Terrace Hopping - Gastronomy"
+    },
+    "terraceHopping-historica-desc": {
+        "es": "",
+        "en": ""
+    },
+    "tapas-malasaña-title": {
+        "es": "Tapas",
+        "en": "Tapas Youth Culture Night in Malasaña Neighbourhood"
+    },
     "tapas-malasaña-desc": {
         "es": "",
         "en": "Come with me to learn all about the \"Movida Madrileña\"! Those crazy years of absolute freedom after Franco's death when youth culture exploded for various generations and Spain was modernised in a fast forward type of mode to international tendencies and youth tribes. Discover the legendary, historic bars and enjoy the most genuine and original side of trendy artist area Malasaña. Legendary song by Manu Chao, \"Me gusta Malasaña, me gustas tú...\", is proof of his appreciation for what used to be his neighbourhood. Time warp into the youth tribes of the roaring 60s to 90s, all in one evening!"
+    },
+    "real-market-title": {
+        "es": "",
+        "en": "Real Markets Tour"
     },
     "real-market-desc": {
         "es": "",
