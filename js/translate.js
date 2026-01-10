@@ -33,8 +33,8 @@ const translations = {
         "en": "Paint and Taste"
     },
     "pinta-cata-desc": {
-        "es": "Lorem ipsum",
-        "en": "Lorem ipsum"
+        "es": "Curso pintura acrílica mientras catas deliciosos vinos",
+        "en": "Acrylic painting course while you taste delicious wines"
     },
     "historic-tours": {
         "es": "Tours Históricos",
@@ -173,6 +173,10 @@ const translations = {
     "discover": {
         "es": "Descubre Madrid con una guía experta",
         "en": "Discover Madrid with an expert guide"
+    },
+    "galería-title": {
+        "es": "Galería",
+        "en": "Gallery"
     }
 };
 

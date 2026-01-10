@@ -5,7 +5,7 @@ const translations = {
         "en": "Introduction"
     },
     "introduction-desc": {
-        "es": "",
+        "es": "Quiero presentarte algunas de las instituciones culinarias más tradicionales de Madrid para contarte todo sobre los legendarios aperitivos llamados tapas y las bebidas locales favoritas.",
         "en": "I want to introduce you to a few of the most traditional culinary institutions in Madrid to tell you all about the legendary aperitives called tapas and favourite local drinks."
     },
     "centenary-tabernas-title": {
@@ -13,39 +13,31 @@ const translations = {
         "en": "Centenary Tabernas of Madrid"
     },
     "centenary-tabernas-desc": {
-        "es": "",
+        "es": "Las tabernas y tiendas centenarias son un verdadero tesoro en los tiempos modernos y están certificadas por las autoridades locales con una placa de bronce en el suelo",
         "en": "Centenary Tabernas and shops are a true treasure in modern times and certified by the local authorities with a bronce plaque on the floor"
     },
-    "terraceHopping-gastronomica-title": {
-        "es": "Terrace Hopping - Gastronómica",
-        "en": "Terrace Hopping - Gastronomy"
+    "terraceHopping-title": {
+        "es": "Terrace Hopping",
+        "en": "Terrace Hopping"
     },
-    "terraceHopping-gastronomica-desc": {
-        "es": "",
-        "en": ""
-    },
-    "terraceHopping-historica-title": {
-        "es": "Terrace Hopping - Histórica",
-        "en": "Terrace Hopping - Gastronomy"
-    },
-    "terraceHopping-historica-desc": {
-        "es": "",
-        "en": ""
+    "terraceHopping-desc": {
+        "es": "Disfruta de las vistas más monumentales de Madrid desde una perspectiva aérea. Sin duda, la forma más relajante de conocer la ciudad, alejado del ruido y con una bebida en la mano si lo deseas. Arquitectura en su máxima expresión y perfecta para orientarte y ubicar los puntos más destacados de la ciudad.",
+        "en": "Enjoy Madrid’s most monumental views from a bird’s view. Definitely the most relaxing way to get to know the city, away from the noise, with a drink in hands if you wish! Architecture at its best and great for getting general orientation of the coordinates of the high lights of the city."
     },
     "tapas-malasaña-title": {
         "es": "Tapas",
         "en": "Tapas Youth Culture Night in Malasaña Neighbourhood"
     },
     "tapas-malasaña-desc": {
-        "es": "",
+        "es": "¡Ven conmigo a conocer todo sobre la 'Movida Madrileña'! Esos años locos de absoluta libertad tras la muerte de Franco, cuando la cultura juvenil estalló en varias generaciones y España se modernizó a velocidad de vértigo siguiendo las tendencias internacionales y las tribus urbanas juveniles. Descubre los bares históricos y legendarios y disfruta del lado más genuino y original del barrio artístico de moda, Malasaña. La legendaria canción de Manu Chao, 'Me gusta Malasaña, me gustas tú...', es prueba de su aprecio por lo que solía ser su barrio. ¡Un viaje en el tiempo por las tribus juveniles de los vibrantes años 60 a 90, todo en una sola noche!",
         "en": "Come with me to learn all about the \"Movida Madrileña\"! Those crazy years of absolute freedom after Franco's death when youth culture exploded for various generations and Spain was modernised in a fast forward type of mode to international tendencies and youth tribes. Discover the legendary, historic bars and enjoy the most genuine and original side of trendy artist area Malasaña. Legendary song by Manu Chao, \"Me gusta Malasaña, me gustas tú...\", is proof of his appreciation for what used to be his neighbourhood. Time warp into the youth tribes of the roaring 60s to 90s, all in one evening!"
     },
     "real-market-title": {
-        "es": "",
+        "es": "Tour de Mercados Reales",
         "en": "Real Markets Tour"
     },
     "real-market-desc": {
-        "es": "",
+        "es": "Déjame llevarte a mis mercados favoritos y más auténticos de la ciudad. Aprende todo sobre las mejores compras de productos frescos de toda España. Una parada obligatoria en el mercado incluye tomar un par de vermús de grifo o una caña mientras charlas con los vecinos sobre qué cocinar hoy. Alejados de los bonitos y modernos mercados gourmet, quiero que te sumerjas en la cultura alimentaria local en su estado más puro: apestoso, bullicioso y ruidoso. ¡Comer dentro o fuera, me encanta la experiencia de cualquier manera!",
         "en": "Let me take you to my favourite, authentic markets in town! Learn everything about the best shopping for fresh products from all over Spain. An obligatory stop at the market includes having a couple of vermuts on tap or a little caña beer while chatting with the neighbours about what to cook today. Away from the beautiful and trendy gourmet markets, I want you to dive into the local food culture at its purest state — smelly, busy, and loud. Eat in or out, I love the experience any way!"
     },
     "inicio": {
