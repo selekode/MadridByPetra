@@ -44,7 +44,7 @@ const translations = {
         "es": "Experiencia Gastronómica",
         "en": "Gastronomic Experience"
     },
-    "pintaycata-paragraph1": {
+    "pintaycata-paragraph-1": {
         "es": "Pinta & Cata es una actividad artística en la cual, los participantes, con las indicaciones de un profesor de pintura, son capaces de pintar una obra de arte en un breve espacio de tiempo, combinado con la degustación de exquisitos vinos y delicias gastronómicas en un ambiente agradable y divertido. No es necesario tener experiencia en artes plásticas, solamente las ganas de experimentar algo nuevo, constructivo y dinámico.",
         "en": "Paint and Taste is an artistic experience in which participants, guided step by step by a painting instructor, are able to create their own artwork in a short period of time, while enjoying a tasting of exquisite wines and gourmet delights in a relaxed, fun, and welcoming atmosphere. No previous artistic experience is required—just the desire to try something new, creative, and engaging."
     }
@@ -88,6 +88,10 @@ const translations = {
     "description-paragraph-4": {
         "es": "Colaboración como correctora de alemán para la revista 'Muy Interesante Historia', aportando precisión cultural y lingüística.",
         "en": "Collaboration as a German-language proofreader for 'Muy Interesante Historia' magazine, providing cultural and linguistic accuracy."
+    },
+    "pintaycata-paragraph-2": {
+        "es": "¡Despierta al artista que llevas dentro en un ambiente divertido y relajado! Este taller privado de pintura es una experiencia creativa única donde, de la mano de un instructor profesional, pintarás tu propia obra maestra, incluso si nunca antes has tomado un pincel. Mientras creas, disfruta de una degustación seleccionada de deliciosos bocadillos gourmet diseñados para despertar tus sentidos. No se requiere experiencia artística previa; solo las ganas de probar algo nuevo, estimulante e inolvidable.",
+        "en": "Unleash your inner artist in a fun and relaxed atmosphere! This private painting workshop is a unique creative experience where, guided by a professional art instructor, you'll paint your own masterpiece, even if you've never picked up a brush before. As you create, enjoy a curated tasting of delicious gourmet bites that awaken the senses. No artistic experience needed, just a desire to try something new, engaging, and unforgettable."
     },
     "discover": {
         "es": "Descubre Madrid de la mano de una guía experta",
