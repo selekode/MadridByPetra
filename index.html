@@ -104,72 +104,130 @@
 
     <section id="services" data-aos="fade-up" class="py-20 px-6 text-center bg-[#F6F5F4] Container_containerlg__tE5_m">
         <h2 class="text-4xl font-semibold text-teal-700 cinzel" data-translate="our-services">Nuestros Servicios</h2>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-around">
 
             <!-- Tour Histórico -->
             <div
-                class="bg-white rounded-2xl  p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
-                <div class="flex items-center justify-center w-20 h-20 rounded-full mb-4 mx-auto"
-                    style="background-color: #CCFBF1;">
-                    <i class="fas fa-archway    text-teal-600 text-3xl"></i>
+                class="relative h-80 rounded-2xl overflow-hidden group transition shadow hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
+
+                <!-- Background image -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                    style="background-image: url('images/historic_tours/malasañaCondeDuque-1.jpg');">
                 </div>
 
-                <h3 class="text-2xl font-semibold text-teal-600" data-translate="historic-tours">Tours Históricos</h3>
-                <p class="text-gray-600 mt-3" data-translate="historic-desc">Explora la historia de Madrid con
-                    recorridos guiados únicos.</p>
-                <a href="tours-historicos.html"
-                    class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
-                    data-translate="learn-more">Ver más</a>
+                <!-- Dark gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                <!-- Content -->
+                <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left">
+                    <h3 class="text-2xl font-semibold text-white" data-translate="historic-tours">
+                        Tours Históricos
+                    </h3>
+
+                    <p class="text-gray-200 mt-2 max-w-sm" data-translate="historic-desc">
+                        Explora la historia de Madrid con recorridos guiados únicos.
+                    </p>
+
+                    <a href="tours-historicos.html"
+                        class="inline-block mt-4 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition w-fit"
+                        data-translate="learn-more">
+                        Ver más
+                    </a>
+                </div>
             </div>
 
             <!-- Experiencia Gastronómica -->
             <div
-                class="bg-white rounded-2xl p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
-                <div class="flex items-center justify-center w-20 h-20 rounded-full mb-4 mx-auto"
-                    style="background-color: #CCFBF1;">
-                    <i class="fas fa-utensils text-teal-700 text-3xl"></i>
+                class="relative h-80 rounded-2xl overflow-hidden group transition shadow hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
+
+                <!-- Background image -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                    style="background-image: url('images/experiencia_gastronomica/centenary_tabernas/20210920_181036.jpg');">
                 </div>
 
+                <!-- Dark gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
-                <h3 class="text-2xl font-semibold text-teal-600" data-translate="gastronomy-experience">Experiencia
-                    Gastronómica</h3>
-                <p class="text-gray-600 mt-3" data-translate="gastronomy-desc">Disfruta de la auténtica cocina madrileña
-                    con expertos locales.</p>
-                <a href="experiencia-gastronomica.html"
-                    class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
-                    data-translate="learn-more">Ver más</a>
-            </div>
+                <!-- Content -->
+                <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left">
+                    <h3 class="text-2xl font-semibold text-white" data-translate="gastronomy-experience">
+                        Experiencia Gastronómica
+                    </h3>
 
-            <!-- Eventos y Cultura -->
-            <div
-                class="bg-white rounded-2xl p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
-                <div class="flex items-center justify-center w-20 h-20 rounded-full mb-4 mx-auto"
-                    style="background-color: #CCFBF1;">
-                    <i class="fas fa-music text-teal-600 text-3xl"></i>
+                    <p class="text-gray-200 mt-2 max-w-sm" data-translate="gastronomy-desc">
+                        Explora la historia de Madrid con recorridos guiados únicos.
+                    </p>
+
+                    <a href="experiencia-gastronomica.html"
+                        class="inline-block mt-4 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition w-fit"
+                        data-translate="learn-more">
+                        Ver más
+                    </a>
                 </div>
-                <h3 class="text-2xl font-semibold text-teal-600" data-translate="events-culture">Eventos y Cultura</h3>
-                <p class="text-gray-600 mt-3" data-translate="events-desc">Descubre conciertos, festivales y
-                    espectáculos en Madrid.</p>
-                <a href="eventos-cultura.html"
-                    class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
-                    data-translate="learn-more">Ver más</a>
             </div>
+
         </div>
 
         <div class="mt-10">
-            <!-- Pinta y cata -->
-            <div class="flex justify-center">
+            <div class="flex flex-col gap-4 sm:flex-row sm:justify-around">
+
+                <!-- Eventos y Cultura -->
                 <div
-                    class="bg-white rounded-2xl p-8 transition transform hover:-translate-y-2 hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)] w-full max-w-md">
-                    <div class="flex items-center justify-center w-20 h-20 rounded-full mb-4 mx-auto"
-                        style="background-color: #CCFBF1;">
-                        <i class="fas fa-palette  text-teal-600 text-3xl"></i>
+                    class="relative h-80 rounded-2xl overflow-hidden group transition shadow hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
+
+                    <!-- Background image -->
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style="background-image: url('images/eventos/20211106_203542.jpg');">
                     </div>
-                    <h3 class="text-2xl font-semibold text-teal-600" data-translate="pinta-cata">Pinta y Cata</h3>
-                    <p class="text-gray-600 mt-3" data-translate="pinta-cata-desc"></p>
-                    <a href="pinta-cata.html"
-                        class="inline-block mt-5 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition"
-                        data-translate="learn-more">Ver más</a>
+
+                    <!-- Dark gradient overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left">
+                        <h3 class="text-2xl font-semibold text-white" data-translate="events-culture">
+                            Eventos y Cultura
+                        </h3>
+
+                        <p class="text-gray-200 mt-2 max-w-sm" data-translate="events-desc">
+                            Descubre conciertos, festivales y
+                            espectáculos en Madrid.
+                        </p>
+
+                        <a href="eventos-cultura.html"
+                            class="inline-block mt-4 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition w-fit"
+                            data-translate="learn-more">
+                            Ver más
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pinta y Cata -->
+                <div
+                    class="relative h-80 rounded-2xl overflow-hidden group transition shadow hover:shadow-[0_6px_30px_rgba(13,148,136,0.5)]">
+
+                    <!-- Background image -->
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style="background-image: url('images/pintaYcata/20241117_114902.jpg');">
+                    </div>
+
+                    <!-- Dark gradient overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left">
+                        <h3 class="text-2xl font-semibold text-white" data-translate="pinta-cata">
+                        </h3>
+
+                        <p class="text-gray-200 mt-2 max-w-sm" data-translate="pinta-cata-desc">
+                        </p>
+
+                        <a href="pinta-cata.html"
+                            class="inline-block mt-4 bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition w-fit"
+                            data-translate="learn-more">
+                            Ver más
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -277,7 +335,8 @@
 
     <!-- Descubre Madrid Section-->
     <section class="py-16 px-6 bg-white " data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-teal-700 text-center mb-12 cinzel" data-translate="carousel-title">Descubre
+        <h2 class="text-3xl font-semibold text-teal-700 text-center mb-12 cinzel" data-translate="carousel-title">
+            Descubre
             Madrid</h2>
 
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -322,16 +381,23 @@
 
     <!-- Galería Section-->
     <section class="py-16 px-6 bg-teal-100" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-teal-700 text-center mb-12 cinzel" data-translate="galería-title">Galería</h2>
+        <h2 class="text-3xl font-semibold text-teal-700 text-center mb-12 cinzel" data-translate="galería-title">Galería
+        </h2>
 
         <div class="max-w-[1280px] mx-auto">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-3">
-                <img src="images/eventos/20220621_141445.jpg" alt="Gastronomía 1" class="w-full h-64 object-cover rounded-lg shadow-md">
-                <img src="images/eventos/20220723_214946.jpg" alt="Gastronomía 2" class="w-full h-64 object-cover rounded-lg shadow-md">
-                <img src="images/eventos/20240412_153108.jpg" alt="Gastronomía 3" class="w-full h-64 object-cover rounded-lg shadow-md">
-                <img src="images/eventos/20240322_205832.jpg" alt="Gastronomía 4" class="w-full h-64 object-cover rounded-lg shadow-md">
-                <img src="images/eventos/20240603_233407.jpg" alt="Gastronomía 5" class="w-full h-64 object-cover rounded-lg shadow-md">
-                <img src="images/eventos/20240317_000125.jpg" alt="Gastronomía 6" class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="images/eventos/20220621_141445.jpg" alt="Gastronomía 1"
+                    class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="images/eventos/20220723_214946.jpg" alt="Gastronomía 2"
+                    class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="images/eventos/20240412_153108.jpg" alt="Gastronomía 3"
+                    class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="images/eventos/20240322_205832.jpg" alt="Gastronomía 4"
+                    class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="images/eventos/20240603_233407.jpg" alt="Gastronomía 5"
+                    class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="images/eventos/20240317_000125.jpg" alt="Gastronomía 6"
+                    class="w-full h-64 object-cover rounded-lg shadow-md">
             </div>
         </div>
 
